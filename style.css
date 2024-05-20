@@ -1,0 +1,50 @@
+body{
+    background-image:url('bg2.jpg');
+    background-color: #f8f8f8;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    
+}
+
+td{
+    background-color:white;
+    color:black;
+    font-family:cursive;
+}
+
+option{
+    font-family: cursive;
+}
+
+input{
+    font-family: cursive;
+    font-size: 20px;
+    
+
+}
+
+.sub{
+    width: 300px;
+}
+
+.sub:hover{
+    background-color: lightgreen;
+    
+}
+
+.tr{
+    font-size: 20px;
+}
+
+.title{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:xx-large;
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        
+}

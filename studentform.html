@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <h1 class="title">STUDENT FORM</h1>
+        <form>
+            <table border="1px">
+                <tr>
+                    <td>Name</td>
+                    <td><input placeholder="Enter your name" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" placeholder="Enter your age" id="age"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="gender" value="Male">Male
+                        <input type="radio" name="gender" value="Female">Female</td>
+                </tr>
+                <tr>
+                    <td>Select</td>
+                    <td><select>
+                            <option>Machine Learning</option>
+                            <option>Python</option>
+                            <option>Cyber security</option>
+                            <option>Data Science</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input placeholder="vaigai123@gmail.com" id="email"></td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="reset" ></td>
+                    <td>
+                    <input type="button" value="Submit" onclick="save()" class="sub">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+
+    <center>
+        <h1 class="title">Student details</h1>
+    <table id="dataTable" border="1">
+        <tr class="tr">
+            <td>Name</td>
+            <td>Age</td>
+            <td>Gender</td>
+            <td>Course</td>
+            <td>Email</td>
+        </tr>
+    </table>
+    </center>
+    
+
+    <script>
+        function save()
+        {
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+            var course = document.querySelector("select").value;
+            var email = document.getElementById("email").value;
+
+            var table = document.getElementById("dataTable");
+            var newRow = table.insertRow(-1);
+
+            var col1 = newRow.insertCell(0);
+            col1.textContent = name;
+
+            var col2 = newRow.insertCell(1);
+            col2.textContent = age;
+
+            var col3 = newRow.insertCell(2);
+            col3.textContent = gender;
+
+            var col4 = newRow.insertCell(3);
+            col4.textContent = course;
+
+
+            var col5 = newRow.insertCell(4)
+            col5.textContent = email;
+
+        }
+
+    </script>
+
+    
+    
+</body>
+</html>
